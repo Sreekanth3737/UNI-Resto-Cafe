@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "postcss";
+import { useState } from "react";
+import CategoryDishes from "./Components/CategoryDishes/CategoryDishes";
+import MenuList from "./Components/MenuList/MenuList";
+import Navbar from "./Components/Navigation/Navbar";
+import Cart from "./context/CartCotext";
+
+
+
 
 function App() {
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    < >
+    <Cart>
+
+      <Navbar    />
+      
+      <MenuList />
+      <CategoryDishes />
+      
+    </Cart>
+    </>
   );
 }
 
