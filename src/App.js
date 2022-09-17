@@ -1,30 +1,23 @@
-import { Container } from "postcss";
-import { useState } from "react";
-import CategoryDishes from "./Components/CategoryDishes/CategoryDishes";
-import MenuList from "./Components/MenuList/MenuList";
-import Navbar from "./Components/Navigation/Navbar";
+import CategoryDishes from "./components/CategoryDishes/CategoryDishes";
+import MenuList from "./components/MenuList/MenuList";
+import Navbar from "./components/Navigation/Navbar";
 import Cart from "./context/CartCotext";
-
-
+import './App.css'
 
 
 function App() {
 
-
-
-
-
   return (
-    < >
+    <div id="app" >
     <Cart>
 
-      <Navbar    />
       
+      <Navbar    />
       <MenuList />
       <CategoryDishes />
-      
+    
     </Cart>
-    </>
+    </div>
   );
 }
 

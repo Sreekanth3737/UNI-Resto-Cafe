@@ -52,22 +52,19 @@ const MenuList = () => {
     ],
   };
 
-  
- 
- 
-
   const categoryList = useSelector((state) => state.menuItem);
   const { menuList, status } = categoryList;
-  const [dishes,setDishes]=useState(menuList[0]?.table_menu_list[0]?.category_dishes)
-  
-const handleClick=(cat,dishes)=>{
-//alert(cat)
-console.log(dishes);
-setDishes(dishes)
-}
+  const [dishes, setDishes] = useState(
+    menuList[0]?.table_menu_list[0]?.category_dishes
+  );
+
+  const handleClick = (cat, dishes) => {
+    //alert(cat)
+    console.log(dishes);
+    setDishes(dishes);
+  };
   useEffect(() => {
     dispatch(fetchMenuItemsAction());
-
   }, [dispatch]);
   //console.log(categoryList);
   return (
@@ -88,7 +85,11 @@ setDishes(dishes)
             );
           })}
         </Slider>
-        <CategoryDishes dishes={dishes ? dishes:menuList[0]?.table_menu_list[0]?.category_dishes} />   
+        <CategoryDishes
+          dishes={
+            dishes ? dishes : menuList[0]?.table_menu_list[0]?.category_dishes
+          }
+        />
       </div>
     </div>
   );

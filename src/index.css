@@ -43,3 +43,8 @@
   .header{
     width: 100%;
   }
+  
+  .navbar{
+    max-width: 1242px;
+    margin: 0 auto;
+    }
